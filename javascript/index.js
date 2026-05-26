@@ -1,0 +1,44 @@
+let currentTab = "all";
+const active = ["bg-navy", "text-white"];
+const inactive = ["bg-white, text-gray"];
+function switchTab(tab)
+{
+    const allTabs = ["all", "interview", "rejected"];
+    for(let t of allTabs){
+        const tabName = document.getElementById(t);
+        if(t == tab)
+        {
+            tabName.classList.add(...active);
+        }
+        else
+        {
+            tabName.classList.remove(...active);
+        }
+    }
+
+    const allContainer = document.getElementById("all-container");
+    const interviewContainer = document.getElementById("interview-container");
+    const rejectContainer = document.getElementById("reject-container");
+
+    const pages = [allContainer, interviewContainer, rejectContainer];
+    for(let p of pages)
+    {
+        p.classList.add("hidden");
+    }
+
+    if(tab == "all")
+    {
+        allContainer.classList.remove("hidden");
+    }
+    else if(tab == "interview")
+    {
+        interviewContainer.classList.remove("hidden");
+    }
+    else
+    {
+        rejectContainer.classList.remove("hidden");
+    }
+
+}
+
+switchTab(currentTab);

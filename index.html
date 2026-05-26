@@ -75,17 +75,17 @@
 
         <!-- Tabs -->
         <div class="flex flex-wrap gap-2 mb-5">
-          <button
+          <button onclick="switchTab('all')" id="all"
             class="px-5 py-1.5 rounded-full border-2 text-sm font-medium cursor-pointer transition-all duration-200"
           >
             All
           </button>
-          <button
+          <button onclick="switchTab('interview')" id="interview"
             class="px-5 py-1.5 rounded-full border-2 text-sm font-medium cursor-pointer transition-all duration-200"
           >
             Interview
           </button>
-          <button
+          <button onclick="switchTab('rejected')" id="rejected"
             class="px-5 py-1.5 rounded-full border-2 text-sm font-medium cursor-pointer transition-all duration-200"
           >
             Rejected
@@ -94,9 +94,9 @@
 
         <!-- Job Cards -->
         <div class="flex flex-col gap-4">
-          <section class="flex flex-col gap-2">
+          <section class="hidden" id="all-container">
             <div
-              class="card bg-white rounded-2xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp"
+              class="card bg-white rounded-2xl border-2 border-slate-100 my-5 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp"
             >
               <div class="flex justify-between items-start gap-4">
                 <div class="flex-1 min-w-0">
@@ -140,7 +140,7 @@
               </div>
             </div>
             <div
-              class="card bg-white rounded-2xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp"
+              class="card bg-white rounded-2xl border-2 border-slate-100 my-5 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp"
             >
               <div class="flex justify-between items-start gap-4">
                 <div class="flex-1 min-w-0">
@@ -184,17 +184,19 @@
               </div>
             </div>
           </section>
-          <section class="flex flex-col gap-2" id="interview-container"></section>
-          <section class="flex flex-col gap-2" id="reject-container"></section>
+          <section class="hidden" id="interview-container"> Interview Section</section>
+          <section class="hidden" id="reject-container">Reject Section</section>
         </div>
 
         <!-- Empty State -->
-        <div class="flex-col items-center justify-center py-20 gap-4 text-center">
+        <div class="hidden items-center justify-center py-20 gap-4 text-center">
           <div class="text-7xl opacity-20">📄</div>
           <p class="font-syne text-lg font-bold text-navy">No jobs available</p>
           <p class="text-sm text-slate-400">Check back soon for new job opportunities</p>
         </div>
       </main>
     </div>
+
+    <script src="./javascript/index.js"></script>
   </body>
 </html>
