@@ -1,6 +1,10 @@
 let currentTab = "all";
 const active = ["bg-navy", "text-white"];
 const inactive = ["bg-white, text-gray"];
+const allContainer = document.getElementById("all-container");
+const interviewContainer = document.getElementById("interview-container");
+const rejectContainer = document.getElementById("reject-container");
+
 function switchTab(tab)
 {
     const allTabs = ["all", "interview", "rejected"];
@@ -15,10 +19,6 @@ function switchTab(tab)
             tabName.classList.remove(...active);
         }
     }
-
-    const allContainer = document.getElementById("all-container");
-    const interviewContainer = document.getElementById("interview-container");
-    const rejectContainer = document.getElementById("reject-container");
 
     const pages = [allContainer, interviewContainer, rejectContainer];
     for(let p of pages)
@@ -38,7 +38,12 @@ function switchTab(tab)
     {
         rejectContainer.classList.remove("hidden");
     }
-
 }
 
 switchTab(currentTab);
+
+const totalStat = document.getElementById("total-stat");
+const interviewStat = document.getElementById("interview-stat");
+const rejectStat = document.getElementById("reject-stat");
+
+totalStat.innerText = allContainer.children.length;
