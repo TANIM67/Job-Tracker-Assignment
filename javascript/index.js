@@ -58,8 +58,11 @@ document.getElementById("jobs-container").addEventListener("click", function(eve
         const card = event.target.closest(".card");
         interviewContainer.append(card);
     }
-    
-
+    if(cilckedEvent.classList.contains("reject"))
+    {
+        const card = event.target.closest(".card");
+        rejectContainer.append(card);
+    }
     
 
 })
