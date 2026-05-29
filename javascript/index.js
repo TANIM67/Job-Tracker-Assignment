@@ -4,6 +4,9 @@ const inactive = ["bg-white, text-gray"];
 const allContainer = document.getElementById("all-container");
 const interviewContainer = document.getElementById("interview-container");
 const rejectContainer = document.getElementById("reject-container");
+const totalStat = document.getElementById("total-stat");
+const interviewStat = document.getElementById("interview-stat");
+const rejectStat = document.getElementById("reject-stat");
 
 function switchTab(tab)
 {
@@ -29,22 +32,45 @@ function switchTab(tab)
     if(tab == "all")
     {
         allContainer.classList.remove("hidden");
+
+        if(allContainer.children.length == 0)
+        {
+            emptyContainer.classList.remove("hidden");
+        }
+        else 
+        {
+            emptyContainer.classList.add("hidden");
+        }
     }
     else if(tab == "interview")
     {
         interviewContainer.classList.remove("hidden");
+        if(interviewContainer.children.length == 0)
+        {
+            emptyContainer.classList.remove("hidden");
+        }
+        else 
+        {
+            emptyContainer.classList.add("hidden");
+        }
     }
     else
     {
         rejectContainer.classList.remove("hidden");
+
+        if(rejectContainer.children.length == 0)
+        {
+            emptyContainer.classList.remove("hidden");
+        }
+        else 
+        {
+            emptyContainer.classList.add("hidden");
+        }
     }
 }
 
 switchTab(currentTab);
 
-const totalStat = document.getElementById("total-stat");
-const interviewStat = document.getElementById("interview-stat");
-const rejectStat = document.getElementById("reject-stat");
 
 totalStat.innerText = allContainer.children.length;
 interviewStat.innerText = interviewContainer.children.length;
@@ -52,26 +78,68 @@ rejectStat.innerText = rejectContainer.children.length;
 
 document.getElementById("jobs-container").addEventListener("click", function(event){
     const cilckedEvent = event.target;
-    // console.log(cilckedEvent);
+
     if(cilckedEvent.classList.contains("interview"))
     {
+        const isInReject = (event.target.closest(".card").closest(".rejectContainer"));
+        const isInAll = (event.target.closest(".card").closest(".allContainer"));
+
         const card = event.target.closest(".card");
         interviewContainer.append(card);
+
+        if(rejectContainer.children.length == 0 && isInReject)
+        {
+            emptyContainer.classList.remove("hidden");
+        }
+
+        if(allContainer.children.length == 0 && isInAll)
+        {
+            emptyContainer.classList.remove("hidden");
+        }
     }
-    if(cilckedEvent.classList.contains("reject"))
+    else if(cilckedEvent.classList.contains("reject"))
     {
+        const isInInterview = (event.target.closest(".card").closest(".interviewContainer"));
+        const isInAll = (event.target.closest(".card").closest(".allContainer"));
+
         const card = event.target.closest(".card");
         rejectContainer.append(card);
+        if(interviewContainer.children.length == 0 && isInInterview)
+        {
+            emptyContainer.classList.remove("hidden");
+        }
+        
+        if(allContainer.children.length == 0 && isInAll)
+        {
+            emptyContainer.classList.remove("hidden");
+        }
     }
-    if(cilckedEvent.classList.contains("delete"))
+    else if(cilckedEvent.classList.contains("delete"))
     {
+        const isInInterview = (event.target.closest(".card").closest(".interviewContainer"));
+        const isInAll = (event.target.closest(".card").closest(".allContainer"));
+        const isInReject = (event.target.closest(".card").closest(".rejectContainer"));
+
+        console.log(event.target.closest(".card").closest(".rejectContainer"));
         const card = event.target.closest(".card");
         // interviewContainer.append(card);
         card.remove();
+
+        if(interviewContainer.children.length == 0 && isInInterview)
+        {
+            emptyContainer.classList.remove("hidden");
+        }
+        else if(allContainer.children.length == 0 && isInAll)
+        {
+            emptyContainer.classList.remove("hidden");
+        }
+        else if(rejectContainer.children.length == 0 && isInReject)
+        {
+            emptyContainer.classList.remove("hidden");
+        }
     }
 
     totalStat.innerText = allContainer.children.length;
     interviewStat.innerText = interviewContainer.children.length;
     rejectStat.innerText = rejectContainer.children.length;
-
 })
