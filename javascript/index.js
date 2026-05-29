@@ -71,6 +71,7 @@ document.getElementById("jobs-container").addEventListener("click", function(eve
     }
 
     totalStat.innerText = allContainer.children.length;
-    
+    interviewStat.innerText = interviewContainer.children.length;
+    rejectStat.innerText = rejectContainer.children.length;
 
 })
