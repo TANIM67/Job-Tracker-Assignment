@@ -47,3 +47,19 @@ const interviewStat = document.getElementById("interview-stat");
 const rejectStat = document.getElementById("reject-stat");
 
 totalStat.innerText = allContainer.children.length;
+interviewStat.innerText = interviewContainer.children.length;
+rejectStat.innerText = rejectContainer.children.length;
+
+document.getElementById("jobs-container").addEventListener("click", function(event){
+    const cilckedEvent = event.target;
+    // console.log(cilckedEvent);
+    if(cilckedEvent.classList.contains("interview"))
+    {
+        const card = event.target.closest(".card");
+        interviewContainer.append(card);
+    }
+    
+
+    
+
+})

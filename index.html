@@ -93,7 +93,7 @@
         </div>
 
         <!-- Job Cards -->
-        <div class="flex flex-col gap-4">
+        <div id="jobs-container" class="flex flex-col gap-4">
           <section class="hidden" id="all-container">
             <div
               class="card bg-white rounded-2xl border-2 border-slate-100 my-5 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp"
@@ -120,12 +120,12 @@
                   </p>
                   <div class="flex flex-wrap gap-2">
                     <button
-                      class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-teal text-teal bg-transparent cursor-pointer transition-all duration-150 hover:bg-teal hover:text-white"
+                      class="interview text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-teal text-teal bg-transparent cursor-pointer transition-all duration-150 hover:bg-teal hover:text-white"
                     >
                       Interview
                     </button>
                     <button
-                      class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-coral text-coral bg-transparent cursor-pointer transition-all duration-150 hover:bg-coral hover:text-white"
+                      class="reject text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-coral text-coral bg-transparent cursor-pointer transition-all duration-150 hover:bg-coral hover:text-white"
                     >
                       Rejected
                     </button>
@@ -133,7 +133,7 @@
                 </div>
 
                 <button
-                  class="text-slate-300 hover:text-red-400 transition-colors duration-150 py-2 px-3 cursor-pointer shrink-0 bg-red-300 rounded-full"
+                  class="delete text-slate-300 hover:text-red-400 transition-colors duration-150 py-2 px-3 cursor-pointer shrink-0 bg-red-300 rounded-full"
                 >
                   <i class="fa-regular fa-trash-can text-black pointer-events-none"></i>
                 </button>
@@ -164,12 +164,12 @@
                   </p>
                   <div class="flex flex-wrap gap-2">
                     <button
-                      class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-teal text-teal bg-transparent cursor-pointer transition-all duration-150 hover:bg-teal hover:text-white"
+                      class="interview text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-teal text-teal bg-transparent cursor-pointer transition-all duration-150 hover:bg-teal hover:text-white"
                     >
                       Interview
                     </button>
                     <button
-                      class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-coral text-coral bg-transparent cursor-pointer transition-all duration-150 hover:bg-coral hover:text-white"
+                      class="reject text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-coral text-coral bg-transparent cursor-pointer transition-all duration-150 hover:bg-coral hover:text-white"
                     >
                       Rejected
                     </button>
@@ -177,7 +177,7 @@
                 </div>
 
                 <button
-                  class="text-slate-300 hover:text-red-400 transition-colors duration-150 py-2 px-3 cursor-pointer shrink-0 bg-red-300 rounded-full"
+                  class="delete text-slate-300 hover:text-red-400 transition-colors duration-150 py-2 px-3 cursor-pointer shrink-0 bg-red-300 rounded-full"
                 >
                   <i class="fa-regular fa-trash-can text-black pointer-events-none"></i>
                 </button>
@@ -208,12 +208,12 @@
                   </p>
                   <div class="flex flex-wrap gap-2">
                     <button
-                      class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-teal text-teal bg-transparent cursor-pointer transition-all duration-150 hover:bg-teal hover:text-white"
+                      class="inverview text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-teal text-teal bg-transparent cursor-pointer transition-all duration-150 hover:bg-teal hover:text-white"
                     >
                       Interview
                     </button>
                     <button
-                      class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-coral text-coral bg-transparent cursor-pointer transition-all duration-150 hover:bg-coral hover:text-white"
+                      class="reject text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-coral text-coral bg-transparent cursor-pointer transition-all duration-150 hover:bg-coral hover:text-white"
                     >
                       Rejected
                     </button>
@@ -221,7 +221,7 @@
                 </div>
 
                 <button
-                  class="text-slate-300 hover:text-red-400 transition-colors duration-150 py-2 px-3 cursor-pointer shrink-0 bg-red-300 rounded-full"
+                  class="delete text-slate-300 hover:text-red-400 transition-colors duration-150 py-2 px-3 cursor-pointer shrink-0 bg-red-300 rounded-full"
                 >
                   <i class="fa-regular fa-trash-can text-black pointer-events-none"></i>
                 </button>
@@ -252,12 +252,12 @@
                   </p>
                   <div class="flex flex-wrap gap-2">
                     <button
-                      class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-teal text-teal bg-transparent cursor-pointer transition-all duration-150 hover:bg-teal hover:text-white"
+                      class="interview text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-teal text-teal bg-transparent cursor-pointer transition-all duration-150 hover:bg-teal hover:text-white"
                     >
                       Interview
                     </button>
                     <button
-                      class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-coral text-coral bg-transparent cursor-pointer transition-all duration-150 hover:bg-coral hover:text-white"
+                      class="reject text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-coral text-coral bg-transparent cursor-pointer transition-all duration-150 hover:bg-coral hover:text-white"
                     >
                       Rejected
                     </button>
@@ -265,7 +265,7 @@
                 </div>
 
                 <button
-                  class="text-slate-300 hover:text-red-400 transition-colors duration-150 py-2 px-3 cursor-pointer shrink-0 bg-red-300 rounded-full"
+                  class="delete text-slate-300 hover:text-red-400 transition-colors duration-150 py-2 px-3 cursor-pointer shrink-0 bg-red-300 rounded-full"
                 >
                   <i class="fa-regular fa-trash-can text-black pointer-events-none"></i>
                 </button>
@@ -296,12 +296,12 @@
                   </p>
                   <div class="flex flex-wrap gap-2">
                     <button
-                      class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-teal text-teal bg-transparent cursor-pointer transition-all duration-150 hover:bg-teal hover:text-white"
+                      class="interview text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-teal text-teal bg-transparent cursor-pointer transition-all duration-150 hover:bg-teal hover:text-white"
                     >
                       Interview
                     </button>
                     <button
-                      class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-coral text-coral bg-transparent cursor-pointer transition-all duration-150 hover:bg-coral hover:text-white"
+                      class="reject text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-coral text-coral bg-transparent cursor-pointer transition-all duration-150 hover:bg-coral hover:text-white"
                     >
                       Rejected
                     </button>
@@ -309,7 +309,7 @@
                 </div>
 
                 <button
-                  class="text-slate-300 hover:text-red-400 transition-colors duration-150 py-2 px-3 cursor-pointer shrink-0 bg-red-300 rounded-full"
+                  class="delete text-slate-300 hover:text-red-400 transition-colors duration-150 py-2 px-3 cursor-pointer shrink-0 bg-red-300 rounded-full"
                 >
                   <i class="fa-regular fa-trash-can text-black pointer-events-none"></i>
                 </button>
@@ -340,12 +340,12 @@
                   </p>
                   <div class="flex flex-wrap gap-2">
                     <button
-                      class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-teal text-teal bg-transparent cursor-pointer transition-all duration-150 hover:bg-teal hover:text-white"
+                      class="interview text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-teal text-teal bg-transparent cursor-pointer transition-all duration-150 hover:bg-teal hover:text-white"
                     >
                       Interview
                     </button>
                     <button
-                      class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-coral text-coral bg-transparent cursor-pointer transition-all duration-150 hover:bg-coral hover:text-white"
+                      class="reject text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-coral text-coral bg-transparent cursor-pointer transition-all duration-150 hover:bg-coral hover:text-white"
                     >
                       Rejected
                     </button>
@@ -353,7 +353,7 @@
                 </div>
 
                 <button
-                  class="text-slate-300 hover:text-red-400 transition-colors duration-150 py-2 px-3 cursor-pointer shrink-0 bg-red-300 rounded-full"
+                  class="delete text-slate-300 hover:text-red-400 transition-colors duration-150 py-2 px-3 cursor-pointer shrink-0 bg-red-300 rounded-full"
                 >
                   <i class="fa-regular fa-trash-can text-black pointer-events-none"></i>
                 </button>
@@ -384,12 +384,12 @@
                   </p>
                   <div class="flex flex-wrap gap-2">
                     <button
-                      class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-teal text-teal bg-transparent cursor-pointer transition-all duration-150 hover:bg-teal hover:text-white"
+                      class="interview text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-teal text-teal bg-transparent cursor-pointer transition-all duration-150 hover:bg-teal hover:text-white"
                     >
                       Interview
                     </button>
                     <button
-                      class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-coral text-coral bg-transparent cursor-pointer transition-all duration-150 hover:bg-coral hover:text-white"
+                      class="reject text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-coral text-coral bg-transparent cursor-pointer transition-all duration-150 hover:bg-coral hover:text-white"
                     >
                       Rejected
                     </button>
@@ -397,7 +397,7 @@
                 </div>
 
                 <button
-                  class="text-slate-300 hover:text-red-400 transition-colors duration-150 py-2 px-3 cursor-pointer shrink-0 bg-red-300 rounded-full"
+                  class="delete text-slate-300 hover:text-red-400 transition-colors duration-150 py-2 px-3 cursor-pointer shrink-0 bg-red-300 rounded-full"
                 >
                   <i class="fa-regular fa-trash-can text-black pointer-events-none"></i>
                 </button>
@@ -428,12 +428,12 @@
                   </p>
                   <div class="flex flex-wrap gap-2">
                     <button
-                      class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-teal text-teal bg-transparent cursor-pointer transition-all duration-150 hover:bg-teal hover:text-white"
+                      class="interview text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-teal text-teal bg-transparent cursor-pointer transition-all duration-150 hover:bg-teal hover:text-white"
                     >
                       Interview
                     </button>
                     <button
-                      class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-coral text-coral bg-transparent cursor-pointer transition-all duration-150 hover:bg-coral hover:text-white"
+                      class="reject text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-coral text-coral bg-transparent cursor-pointer transition-all duration-150 hover:bg-coral hover:text-white"
                     >
                       Rejected
                     </button>
@@ -441,7 +441,7 @@
                 </div>
 
                 <button
-                  class="text-slate-300 hover:text-red-400 transition-colors duration-150 py-2 px-3 cursor-pointer shrink-0 bg-red-300 rounded-full"
+                  class="delete text-slate-300 hover:text-red-400 transition-colors duration-150 py-2 px-3 cursor-pointer shrink-0 bg-red-300 rounded-full"
                 >
                   <i class="fa-regular fa-trash-can text-black pointer-events-none"></i>
                 </button>
@@ -472,12 +472,12 @@
                   </p>
                   <div class="flex flex-wrap gap-2">
                     <button
-                      class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-teal text-teal bg-transparent cursor-pointer transition-all duration-150 hover:bg-teal hover:text-white"
+                      class="interview text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-teal text-teal bg-transparent cursor-pointer transition-all duration-150 hover:bg-teal hover:text-white"
                     >
                       Interview
                     </button>
                     <button
-                      class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-coral text-coral bg-transparent cursor-pointer transition-all duration-150 hover:bg-coral hover:text-white"
+                      class="reject text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-coral text-coral bg-transparent cursor-pointer transition-all duration-150 hover:bg-coral hover:text-white"
                     >
                       Rejected
                     </button>
@@ -485,7 +485,7 @@
                 </div>
 
                 <button
-                  class="text-slate-300 hover:text-red-400 transition-colors duration-150 py-2 px-3 cursor-pointer shrink-0 bg-red-300 rounded-full"
+                  class="delete text-slate-300 hover:text-red-400 transition-colors duration-150 py-2 px-3 cursor-pointer shrink-0 bg-red-300 rounded-full"
                 >
                   <i class="fa-regular fa-trash-can text-black pointer-events-none"></i>
                 </button>
