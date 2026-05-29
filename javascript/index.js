@@ -70,5 +70,7 @@ document.getElementById("jobs-container").addEventListener("click", function(eve
         card.remove();
     }
 
+    totalStat.innerText = allContainer.children.length;
     
+
 })
