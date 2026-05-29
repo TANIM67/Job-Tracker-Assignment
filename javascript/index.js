@@ -63,6 +63,12 @@ document.getElementById("jobs-container").addEventListener("click", function(eve
         const card = event.target.closest(".card");
         rejectContainer.append(card);
     }
-    
+    if(cilckedEvent.classList.contains("delete"))
+    {
+        const card = event.target.closest(".card");
+        // interviewContainer.append(card);
+        card.remove();
+    }
 
+    
 })
