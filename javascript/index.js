@@ -11,6 +11,7 @@ const rejectStat = document.getElementById("reject-stat");
 function switchTab(tab)
 {
     const allTabs = ["all", "interview", "rejected"];
+    currentTab = tab;
     for(let t of allTabs){
         const tabName = document.getElementById(t);
         if(t == tab)
@@ -24,6 +25,7 @@ function switchTab(tab)
     }
 
     const pages = [allContainer, interviewContainer, rejectContainer];
+
     for(let p of pages)
     {
         p.classList.add("hidden");
@@ -32,6 +34,8 @@ function switchTab(tab)
     if(tab == "all")
     {
         allContainer.classList.remove("hidden");
+        const jobNumber = document.getElementById("job-number");
+        jobNumber.innerText = allContainer.children.length;
 
         if(allContainer.children.length == 0)
         {
@@ -45,6 +49,9 @@ function switchTab(tab)
     else if(tab == "interview")
     {
         interviewContainer.classList.remove("hidden");
+        const jobNumber = document.getElementById("job-number");
+        jobNumber.innerText = interviewContainer.children.length;
+
         if(interviewContainer.children.length == 0)
         {
             emptyContainer.classList.remove("hidden");
@@ -57,6 +64,8 @@ function switchTab(tab)
     else
     {
         rejectContainer.classList.remove("hidden");
+        const jobNumber = document.getElementById("job-number");
+        jobNumber.innerText = rejectContainer.children.length;
 
         if(rejectContainer.children.length == 0)
         {
@@ -85,6 +94,8 @@ document.getElementById("jobs-container").addEventListener("click", function(eve
         const isInAll = (event.target.closest(".card").closest(".allContainer"));
 
         const card = event.target.closest(".card");
+        const status = card.querySelector(".status");
+        status.innerText = "Interviewed";
         interviewContainer.append(card);
 
         if(rejectContainer.children.length == 0 && isInReject)
@@ -103,6 +114,8 @@ document.getElementById("jobs-container").addEventListener("click", function(eve
         const isInAll = (event.target.closest(".card").closest(".allContainer"));
 
         const card = event.target.closest(".card");
+        const status = card.querySelector(".status");
+        status.innerText = "Rejected";
         rejectContainer.append(card);
         if(interviewContainer.children.length == 0 && isInInterview)
         {
